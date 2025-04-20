@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Anime Terkenal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 2rem;
+        }
+        h1 {
+            margin: 0;
+        }
+        table.data {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        table.data, table.data th, table.data td {
+            border: 1px solid #fdf9f9;
+        }
+        table.data th, table.data td {
+            padding: 12px;
+            text-align: center;
+        }
+        table.data th {
+            background-color: #a21651;
+            color: white;
+            text-transform: uppercase;
+        }
+        table.data tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #000000;
+            color: white;
+            font-size: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .anime-logo {
+            max-width: 200px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Daftar Anime Terkenal</h1>
+</header>
+
+<main>
+    <div style="text-align:center;">
+        <!-- Gambar terbaru -->
+        <img src="{{ url_for('static', filename='WhatsApp Image 2025-04-18 at 18.53.43_4f26d49a.jpg') }}" alt="Anime Logo" class="anime-logo">
+        <p><strong>Anime yang wajib ditonton!</strong></p>
+    </div>
+    {{ table|safe }}
+    <!-- Statistik NumPy -->
+    <div class="stats">
+        <p>Rata-rata Tahun Rilis: {{ rata2 }}</p>
+        <p>Median Tahun Rilis: {{ median }}</p>
+        <p>Standar Deviasi: {{ std_dev }}</p>
+        <p>Cumulative Sum Tahun Rilis: {{ cumulative }}</p>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 - Daftar Anime Terkenal</p>
+</footer>
+
+</body>
+</html>
